@@ -49,7 +49,7 @@ def number_template(n):
     """ Displays a HTML page on port 5000, if:
         n is an integer
     """
-    return num_template('5-number.html', n=number)
+    return num_template('5-number.html', n=n)
 
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
@@ -58,7 +58,7 @@ def number_odd_or_even(n):
         n is an integer
         n is an odd|even number
     """
-    return num('6-number_odd_or_even.html', n=number)
+    return num('6-number_odd_or_even.html', n=n)
 
 
 if __name__ == "__main__":
