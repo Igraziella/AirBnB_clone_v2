@@ -37,7 +37,7 @@ def python(text='is cool'):
 
 
 @app.route('/number/<n>', strict_slashes=False)
-def number(int: n):
+def number(n):
     """ Displays n is number on port 5000, if:
         n is an integer
     """
