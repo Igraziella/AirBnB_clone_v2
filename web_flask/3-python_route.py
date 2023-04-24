@@ -27,6 +27,7 @@ def c():
     return 'C {}'.format(text.replace('_', ' '))
 
 
+@app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python(text='is cool'):
     """ Displays Python on port 5000, followed by
