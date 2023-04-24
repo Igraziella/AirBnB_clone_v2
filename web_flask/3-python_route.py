@@ -24,7 +24,7 @@ def c():
     """ Displays C on port 5000, followed by
         the value of the text variable
     """
-    return 'c {}'.format(text.replace('_', ' '))
+    return 'C {}'.format(text.replace('_', ' '))
 
 
 @app.route('/python/<text>', strict_slashes=False)
@@ -32,7 +32,7 @@ def python(text='is cool'):
     """ Displays Python on port 5000, followed by
         the value of the text variable
     """
-    return 'python {}'.format(text.replace('_', ' '))
+    return 'Python {}'.format(text.replace('_', ' '))
 
 
 if __name__ == "__main__":
