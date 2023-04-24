@@ -20,7 +20,7 @@ def hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def c():
+def c(text):
     """ Displays C on port 5000, followed by
         the value of the text variable
     """
