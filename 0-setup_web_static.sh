@@ -4,14 +4,13 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 
-sudo mkdir -p /data/
 sudo mkdir -p /data/web_static/
 sudo mkdir -p /data/web_static/releases/test/
 sudo mkdir -p data/web_static/shared/
 
-echo > "ceci est mon propre page" /data/web_static/releases/test/index.html
+echo "ceci est mon propre page" > /data/web_static/releases/test/index.html
 
-ln -s -f /data/web_static/releases/test/ /data/web_static/current/
+ln -s -f /data/web_static/releases/test/ /data/web_static/current
 
 chown -R ubuntu:ubuntu /data/
 
@@ -23,7 +22,7 @@ printf %s "server {
         index index.html index.htm;
 
         location /hbnb_static {
-                alias /data/web_static/current/;
+                alias /data/web_static/current;
                 index index.html index.htm;
         }
         error_page 404 /404.html;
