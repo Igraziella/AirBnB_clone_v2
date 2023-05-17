@@ -12,7 +12,7 @@ echo "ceci est mon propre page" > /data/web_static/releases/test/index.html
 
 ln -s -f /data/web_static/releases/test/ /data/web_static/current
 
-chown -R ubuntu:ubuntu /data/
+chown -R ubuntu /data/
 
 printf %s "server {
         listen 80 default_server;
